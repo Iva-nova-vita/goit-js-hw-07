@@ -28,12 +28,28 @@ button {
   border-radius: 8px;
   padding: 8px 16px;
   width: max-content;
-  margin-top: 8px;
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.04em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #6c8cff;
+  }
+}
+
+input {
+  display: block;
+  width: 360px;
+  border: 1px solid #808080;
+  padding: 8px 16px;
+  border-radius: 4px;
+
+  &:hover {
+    border-color: #000000;
+  }
 }
 
 #categories {
@@ -89,11 +105,6 @@ button {
 }
 
 #name-input {
-  padding: 8px 16px;
-  border: 1px solid #808080;
-  border-radius: 4px;
-  width: 360px;
-
   &::placeholder {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -123,12 +134,8 @@ button {
     text-align: left;
   }
 
-  input {
-    display: block;
-    width: 360px;
-    border: 1px solid #808080;
-    padding: 8px 16px;
-    border-radius: 4px;
+  button {
+    margin-top: 8px;
   }
 }
 
@@ -148,4 +155,43 @@ button {
     line-height: 24px;
     letter-spacing: 0.04em;
   }
+}
+
+#controls {
+  display: flex;
+  gap: 8px;
+  padding: 32px;
+  background-color: #f6f6fe;
+  border-radius: 8px;
+  width: max-content;
+  margin-bottom: 16px;
+
+  input {
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    background: transparent;
+    text-align: center;
+  }
+
+  button {
+    padding: 8px 32px;
+  }
+
+  button[data-destroy] {
+    background-color: #ff4e4e;
+
+    &:hover {
+      background-color: #ff7070;
+    }
+  }
+}
+
+#boxes {
+  display: flex;
+  gap: 16px;
+  background-color: #f6f6fe;
+  border-radius: 8px;
+  width: max-content;
+  padding: 32px;
 }
