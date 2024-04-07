@@ -20,6 +20,22 @@ ul {
   padding: 0;
 }
 
+button {
+  background-color: #4e75ff;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: max-content;
+  margin-top: 8px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+}
+
 #categories {
   padding: 24px;
 
@@ -110,24 +126,25 @@ ul {
   input {
     display: block;
     width: 360px;
-
     border: 1px solid #808080;
     padding: 8px 16px;
     border-radius: 4px;
   }
+}
 
-  button {
-    background-color: #4e75ff;
-    color: #fff;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    padding: 8px 16px;
-    width: max-content;
-    margin-top: 8px;
-    font-family: Montserrat;
+.widget {
+  background-color: #fff;
+  width: 345px;
+  height: 280px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.04em;
   }
