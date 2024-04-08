@@ -2,19 +2,12 @@ const form = document.querySelector('.login-form');
 const inputEmail = document.querySelector('input[type="email"]');
 const inputPassword = document.querySelector('input[type="password"]');
 form.addEventListener('submit', formSubmit);
-inputEmail.addEventListener('input', trimValue);
-inputPassword.addEventListener('input', trimValue);
-
-function trimValue(e) {
-  const value = e.target.value.trim();
-  this.value = value;
-}
 
 function formSubmit(e) {
   e.preventDefault();
 
-  const email = e.target.elements.email.value;
-  const password = e.target.elements.password.value;
+  const email = e.target.elements.email.value.trim();
+  const password = e.target.elements.password.value.trim();
 
   if (email && password) {
     const credentials = {

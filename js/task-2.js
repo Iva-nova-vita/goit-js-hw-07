@@ -13,18 +13,8 @@ const images = [
   },
 ];
 
-images.forEach((image) => {
-  const ul = document.querySelector('.gallery');
-  // first way
+const gallery = images.reduce((string, image) => {
+  return string + `<li><img src="${image.url}" alt="${image.alt}"</li>`
+}, '');
+document.querySelector('.gallery').insertAdjacentHTML("afterbegin", gallery);
 
-  // const li = document.createElement('li');
-  // ul.append(li);
-  // const img = document.createElement('img');
-  // img.src = image.url;
-  // img.alt = image.alt;
-  // li.append(img);
-
-  // second way
-  const li = `<li><img src="${image.url}" alt="${image.alt}"</li>`
-  ul.insertAdjacentHTML("afterbegin", li);
-});

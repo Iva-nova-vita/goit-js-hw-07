@@ -1,6 +1,7 @@
 const inputName = document.getElementById('name-input');
+const inputOutput = document.getElementById('name-output');
 inputName.addEventListener('input', printName);
-function printName(e) {
-  const name = e.target.value.trim() || 'Anonymous';
-  document.getElementById('name-output').textContent = name;
+function printName() {
+  const name = inputName.value.trim() || 'Anonymous';
+  inputOutput.textContent = name;
 }
